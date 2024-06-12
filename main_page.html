@@ -149,6 +149,7 @@
                 transition: all 0.3s ease;
                 width: 140px;
                 margin-bottom: 100px;
+                font-family: 'Crimson Text';
               }
               
               .square-button::before {
@@ -201,6 +202,36 @@
                 text-decoration: underline;
             }
 
+            .popup-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); 
+                z-index: 999; 
+            }
+    
+            .popup {
+                display: none;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background-color: rgba(59, 19, 71, 0.9);
+                color: #EFE9E1;
+                padding: 20px;
+                border-radius: 5px;
+                z-index: 1000;  
+                
+                font-size: 50px;
+            }
+    
+            .popup.show {
+                display: block;
+            }
+
         </style>
     </head>
     <body>
@@ -245,8 +276,8 @@
         </div>
         <div class="product-container">
             <div class="product">
-                <a href="#produk1"><img src="resource/floral1_EDT.png" alt="Produk 1" class="produk1"></a> <br>
-                <a href="#produk1">Eucalyptia Royale</a>
+                <a href="Product_detail1.html"><img src="resource/floral1_EDT.png" alt="Produk 1" class="produk1"></a> <br>
+                <a href="Product_detail1.html">Eucalyptia Royale</a>
                 <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
                 <div class="price">
                     <p>Eau De Toilette | 75ML</p>
@@ -255,8 +286,8 @@
                 <a href="#" class="square-button">Add To Bag</a>
             </div>
             <div class="product">
-                <a href="#produk2"><img src="resource/floral1_EDP.png" alt="Produk 2" class="produk2"></a> <br>
-                <a href="#produk2">Eucalyptia Royale</a>
+                <a href="Product_detail2.html"><img src="resource/floral1_EDP.png" alt="Produk 2" class="produk2"></a> <br>
+                <a href="Product_detail2.html">Eucalyptia Royale</a>
                 <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
                 <div class="price">
                     <p>Eau De Toilette | 75ML</p>
@@ -265,8 +296,8 @@
                 <a href="#" class="square-button">Add To Bag</a>
             </div>
             <div class="product">
-                <a href="#produk3"><img src="resource/floral2_EDP.png" alt="Produk 3" class="produk3"></a> <br>
-                <a href="#produk3">Eucalyptia Royale</a>
+                <a href="Product_detail1.html"><img src="resource/floral2_EDT.png" alt="Produk 3" class="produk3"></a> <br>
+                <a href="Product_detail1.html">Eucalyptia Royale</a>
                 <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
                 <div class="price">
                     <p>Eau De Toilette | 75ML</p>
@@ -276,6 +307,13 @@
             </div>
         </div>
     </section>
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        Item successfully added to bag
+    </div>
     
         <!-- Footer -->
     <footer class="footer">
@@ -305,6 +343,31 @@
                 var section = document.getElementById('section4');
                 section.scrollIntoView({ behavior: 'smooth' });
             });
+            
+            var addToBagButtons = document.querySelectorAll('.square-button');
+            addToBagButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    showPopup();
+                    setTimeout(hidePopup, 2000); // Hide popup after 2 seconds
+                });
+            });
+
+            function showPopup() {
+                var popupOverlay = document.getElementById('popupOverlay');
+                var popup = document.getElementById('popup');
+                popupOverlay.style.display = 'block';
+                popup.classList.add('show');
+            }
+
+            function hidePopup() {
+                var popupOverlay = document.getElementById('popupOverlay');
+                var popup = document.getElementById('popup');
+                popupOverlay.style.display = 'none';
+                popup.classList.remove('show');
+            }
         });
+
+        
     </script>
 </html>

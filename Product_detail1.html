@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            background-color:#EFE9E1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            background-color: #3B1347;
+            font-family: 'Crimson Text', serif;
+        }
+        .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-left: 100px;
+            width: 75px;
+        }
+        .icon {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .left-icon {
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+        }
+        .right-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .right-icon1, .right-icon2, .right-icon3 {
+            width: 40px;  
+            height: 40px; 
+        }
+        .right-icon2 {
+            width: 28px;  
+            height: 33px; 
+            margin-bottom: 5px;
+        }
+        .right-icon3 {
+            width: 37px;  
+            height: 35px;
+            margin-bottom:4px; 
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+            background-color: #EFE9E1;
+            font-weight: 650;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .links a {
+            color: #3B1347;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .links span {
+            color: #3B1347;
+            margin: 0 5px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .detail-product {
+            display: flex;
+            margin-top: 100px; /* Adjust based on the navbar height */
+            padding: 20px;
+            background-color:#EFE9E1;
+            
+        }
+        .image-border {
+            padding: 10px;
+            border: 2px solid #EFE9E1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            height: 500px;
+            width: 500px;
+        
+        }
+        .image-container {
+            position: relative;
+            margin-right: 20px;
+        }
+        .image-container img {
+            width: 350px;
+            height: 450px;
+            object-fit: cover;
+            margin-top: 30px;
+            margin-left: 75px;
+            border-radius: 10px;
+        }
+        .details-container {
+            width: 500px;
+            padding: 20px;
+            margin-right: 0;
+            color: #3B1347;
+        }
+        .details-container h2 {
+            margin: 0;
+            font-size: 50px;
+        }
+        .details-container p {
+            margin: 10px 0;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .price {
+            font-size: 22px;
+            color: #3B1347;
+        }
+        .notes {
+            margin-top: 50px;
+        }
+        .notes p {
+            margin: 5px 0;
+            font-size: 20px;
+        }
+
+        .desc {
+            font-family: 'Crimson Text';
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+        /* Styles for quantity buttons */
+        .quantity-container {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+            margin-left: 150px;
+            font-family: 'Cinzel';
+        }
+        .quantity-container button {
+            width: 30px;
+            height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #EFE9E1;
+            background-color: #3B1347;
+            width: 40px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        .quantity-container span {
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            width: 20px;
+            
+        }
+        .square-button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px; 
+            text-decoration: none;
+            background-color: #3B1347;
+            color: #BFACC8;
+            transition: all 0.3s ease;
+            width: 180px;
+            height: 30px;
+            justify-content: center;
+            text-align: center;
+            line-height: 30px;
+            font-family: 'Crimson Text';
+          }
+          
+          .square-button::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            border: 2px solid #BFACC8; 
+          }
+          
+          .square-button:hover {
+            background-color: #BFACC8;
+            color: #3B1347;
+          }
+          
+          .square-button:hover::before {
+            border-color: #3B1347; 
+          }
+          .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            z-index: 999; 
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(59, 19, 71, 0.9);
+            color: #EFE9E1;
+            padding: 20px;
+            border-radius: 5px;
+            z-index: 1000;  
+            
+            font-size: 40px;
+        }
+
+        .popup.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="top-bar">
+            <img src="resource/left-icon.png" alt="Left Icon" class="icon left-icon"> 
+            <img src="resource/logo.png" alt="Logo" class="logo"> 
+            <div class="right-icons">
+                <img src="resource/right-icon1.png" alt="Right Icon 1" class="icon right-icon1"> 
+                <img src="resource/right-icon2.png" alt="Right Icon 2" class="icon right-icon2"> 
+                <img src="resource/right-icon3.png" alt="Right Icon 3" class="icon right-icon3">
+            </div>
+        </div>
+        <div class="links">
+            <a href="main_page.html">Home</a><span>|</span>
+            <a href="main_page.html#section4">Best Seller</a><span>|</span>
+            <a href="EDT_page.html">Eau De Toilette</a><span>|</span>
+            <a href="EDP_page.html">Eau De Parfume</a>
+        </div>
+    </div>
+
+    <div class="detail-product">
+        <div class="image-container">
+            <div class="image-border">
+                <img src="resource/floral2_EDT.png" alt="Eucalyptia Royale">
+            </div>
+        </div>
+        <div class="details-container">
+            <p>Eau De Toilette / Floral / Best Seller</p>
+            <h2>Eucalyptia Royale</h2>
+            <div class="desc">
+            <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
+        </div>
+            <p class="price"><strong>$125.00</strong> | 75ml</p>
+            <div class="notes">
+                <p><strong>Top Notes: Eucalyptus, Lemon, Peppermint</strong></p>
+                <p><strong>Heart Notes: Lavender, Pine, Geranium</strong></p>
+                <p><strong>Base Notes: Cedarwood, Musk, Amber</strong></p>
+            </div>
+            <div class="quantity-container">
+                <button id="decrease">-</button>
+                <span id="quantity">1</span>
+                <button id="increase">+</button>
+                <a href="#" class="square-button">Add To Bag</a>
+            </div>
+        </div>
+    </div>
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popupOverlay"></div>
+    
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        Item successfully added to bag
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("DOM fully loaded and parsed");
+
+            var linkToBestSeller = document.querySelector('a[href="#section4"]');
+            if (linkToBestSeller) {
+                linkToBestSeller.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var section = document.getElementById('section4');
+                    if (section) {
+                        section.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            } else {
+                console.error("Best Seller link not found");
+            }
+
+            var quantity = 1;
+
+            const quantityDisplay = document.getElementById('quantity');
+            const decreaseButton = document.getElementById('decrease');
+            const increaseButton = document.getElementById('increase');
+
+            if (quantityDisplay && decreaseButton && increaseButton) {
+                decreaseButton.addEventListener('click', function() {
+                    console.log("Decrease button clicked");
+                    if (quantity > 1) {
+                        quantity--;
+                        updateQuantity();
+                    }
+                });
+
+                increaseButton.addEventListener('click', function() {
+                    console.log("Increase button clicked");
+                    quantity++;
+                    updateQuantity();
+                });
+
+                function updateQuantity() {
+                    quantityDisplay.textContent = quantity;
+                }
+            } else {
+                console.error("Quantity display or buttons not found");
+            }
+        });
+
+        var addToBagButtons = document.querySelectorAll('.square-button');
+            addToBagButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    showPopup();
+                    setTimeout(hidePopup, 2000); // Hide popup after 2 seconds
+                });
+            });
+
+            function showPopup() {
+                var popupOverlay = document.getElementById('popupOverlay');
+                var popup = document.getElementById('popup');
+                popupOverlay.style.display = 'block';
+                popup.classList.add('show');
+            }
+
+            function hidePopup() {
+                var popupOverlay = document.getElementById('popupOverlay');
+                var popup = document.getElementById('popup');
+                popupOverlay.style.display = 'none';
+                popup.classList.remove('show');
+            }
+        
+    </script>
+</body>
+</html>
