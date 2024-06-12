@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            font-family: 'Cinzel';
+        }
+        body {
+            margin: 0;
+            font-family: 'Cinzel';
+            
+            background-color: #EFE9E1;
+        }
+        .navbar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            background-color: #EFE9E1;
+            font-family: 'Crimson Text', serif;
+        }
+        .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-left: 100px;
+            width: 75px;
+        }
+        .icon {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .left-icon {
+            width: 40px;
+            height: 30px;
+            margin-left: 20px;
+        }
+        .right-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .right-icon1 {
+            width: 40px;  
+            height: 40px; 
+        }
+        .right-icon2 {
+            width: 28px;  
+            height: 33px; 
+            margin-bottom: 5px;
+        }
+        .right-icon3 {
+            width: 37px;  
+            height: 35px;
+            margin-bottom:4px; 
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            background-color: #EFE9E1;
+            font-weight: 650;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .links a {
+            color: #3B1347;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .links span {
+            color: #3B1347;
+            margin: 0 5px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /*content*/
+        .outer-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            width: 90%;
+            height: 75%;
+            border: 2px solid #C5B773;
+            padding: 20px;
+            background-color: #EFE9E1;
+            
+        }
+        .container {
+            justify-content: center;
+            width: 100%;
+            border: 2px solid #C5B773;
+            padding: 20px;
+            background-color: #EFE9E1;
+        }
+        .border-line h2 {
+            font-size: 30px;
+            margin-bottom: 40px;
+            color: #3B1347;
+        }
+        .input-group {
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            margin-left: 350px;
+            color: #3B1347;
+        }
+        .input-group input {
+            width: 50%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-left: 25%;
+            
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .forgot-password {
+            text-decoration: underline;
+            color: #3B1347;
+            cursor: pointer;
+            margin-left: 350px;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #C5B773;
+            border-radius: 5px;
+            color: #3B1347;
+            transition: background-color 0.3s ease;
+            justify-content: center;
+            width: 450px;
+        }
+        .btn2{
+            background-color: #C5B773;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #C5B773;
+            color: #3B1347;
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>    
+    <div class="navbar">
+        <div class="top-bar">
+            <a href="main_page.html"><img src="resource/back-button.png" alt="Left Icon" class="icon left-icon"> </a>
+            <img src="resource/logo.png" alt="Logo" class="logo"> 
+            <div class="right-icons">
+                <div class="icon right-icon1"> </div>
+                <div class="icon right-icon2"> </div>
+                <div class="icon right-icon3"> </div>
+            </div>
+        </div>
+    </div>
+<div class="outer-container">
+    <div class="container">
+        <div class="border-line">
+        <h2 style="text-align:center;">MY ACCOUNT</h2>
+    </div>
+        <div class="input-group">
+            <label for="username">Username Or Email Address*</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password*</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="forgot-password">Forgot password?</div>
+        <div class="button">
+            <a href="main_page.html" class="btn">Sign In</a>
+        </div>
+        <div class="border-line"></div>
+        <p style="text-align:left; margin-left:350px; color: #3B1347;"><strong>Don't have an account</strong> </p>
+        <p style="text-align:left; margin-left:370px; margin-bottom:20px; color: #3B1347;">Enhance your experience and unlock exclusive benefits by creating a personalized account.</p>
+        <div class="button">
+            <a href="sign_up1.html" class="btn btn2">Create New Account</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            font-family: 'Cinzel';
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        body {
+            margin: 0;
+            font-family: 'Cinzel';
+            background-color: #EFE9E1;
+        }
+        .navbar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            background-color: #EFE9E1;
+            font-family: 'Crimson Text', serif;
+        }
+        .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            margin-left: 100px;
+            width: 75px;
+        }
+        .icon {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .left-icon {
+            width: 40px;
+            height: 30px;
+            margin-left: 20px;
+        }
+        .right-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .right-icon1 {
+            width: 40px;  
+            height: 40px; 
+        }
+        .right-icon2 {
+            width: 28px;  
+            height: 33px; 
+            margin-bottom: 5px;
+        }
+        .right-icon3 {
+            width: 37px;  
+            height: 35px;
+            margin-bottom:4px; 
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            background-color: #EFE9E1;
+            font-weight: 650;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .links a {
+            color: #3B1347;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .links span {
+            color: #3B1347;
+            margin: 0 5px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /*content*/
+        .outer-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            width: 90%;
+            height: 75%;
+            border: 2px solid #C5B773;
+            padding: 20px;
+            background-color: #EFE9E1;
+            
+        }
+        .container {
+            justify-content: center;
+            width: 100%;
+            border: 2px solid #C5B773;
+            padding: 20px;
+            background-color: #EFE9E1;
+        }
+        .border-line h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #3B1347;
+            font-family: 'Cinzel';
+        }
+    
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #C5B773;
+            border-radius: 5px;
+            color: #3B1347;
+            transition: background-color 0.3s ease;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 250px;
+        }
+        .btn2{
+            background-color: #C5B773;
+        }
+        .btn:hover {
+            background-color: #C5B773;
+            color: #3B1347;
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    
+        .content {
+    
+            justify-content: center;
+            align-items: center;
+            color: #3B1347;
+            font-family: 'Cinzel';
+        }
+
+        .content-header {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            height: 50px;
+        }
+
+        .logo-back {
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            height: 300px;
+        }
+
+
+    </style>
+</head>
+<body>    
+    <div class="navbar">
+        <div class="top-bar">
+            <div class="icon left-icon"> </div>
+            <img src="resource/logo.png" alt="Logo" class="logo"> 
+            <div class="right-icons">
+                <div class="icon right-icon1"> </div>
+                <div class="icon right-icon2"> </div>
+                <div class="icon right-icon3"> </div>
+            </div>
+        </div>
+    </div>
+<div class="outer-container">
+    <div class="container">
+        <div class="border-line">
+        <h2 style="text-align:center;">CREATE A NEW ACCOUNT</h2>
+    </div>
+    <div class="content">
+        <div class="content-header">
+        <h2>THANK YOU FOR VERIFYING</h2> </div>
+    <div class="logo-back">
+        <img src="resource/logo_noBrand.png">
+    </div>
+
+    </div>
+        <div class="button">
+            <a href="main_page.html" class="btn btn2">BACK TO HOMEPAGE</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
