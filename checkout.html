@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            background-color: #EFE9E1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            background-color: #3B1347;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .top-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin-left: 100px;
+            width: 75px;
+        }
+
+        .icon {
+            margin: 0 10px;
+            cursor: pointer;
+        }
+
+        .left-icon {
+            width: 40px;
+            height: 40px;
+            margin-left: 20px;
+        }
+
+        .right-icons {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .right-icon1, .right-icon2, .right-icon3 {
+            width: 40px;  
+            height: 40px; 
+        }
+
+        .right-icon2 {
+            width: 28px;  
+            height: 33px; 
+            margin-bottom: 5px;
+        }
+
+        .right-icon3 {
+            width: 37px;  
+            height: 35px;
+            margin-bottom:4px; 
+        }
+
+        .links {
+            display: flex;
+            justify-content: center;
+            background-color: #EFE9E1;
+            font-weight: 650;
+            width: 100%;
+            padding: 10px 0;
+        }
+
+        .links a {
+            color: #3B1347;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .links span {
+            color: #3B1347;
+            margin: 0 5px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 70%;
+            background-color: #EFE9E1;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 140px; /* Adjusting for fixed navbar */
+        }
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .left, .right {
+            width: 48%;
+        }
+
+        .send-gift, .payment-detail, .shipping-address {
+            background-color: #F8F4EF;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #C8BFB0;
+            border-radius: 10px;
+        }
+
+        .send-gift input {
+            margin-right: 10px;
+        }
+
+        .send-gift p {
+            margin: 0;
+        }
+
+        .payment-detail h2, .shipping-address h2 {
+            font-size: 1.5em;
+            color: #3B1347;
+            margin-bottom: 10px;
+        }
+
+        .payment-detail .product, .payment-detail .total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .payment-detail .product img {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .shipping-address label {
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'Crimson Text', serif;
+            color: #3B1347;
+        }
+
+        .shipping-address input, .shipping-address textarea {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #C8BFB0;
+            border-radius: 5px;
+            font-family: 'Crimson Text', serif;
+        }
+
+        .shipping-address .half-width {
+            width: calc(50% - 11px);
+            display: inline-block;
+            margin-right: 11px; /* Mengurangi margin agar sesuai dengan perubahan pada HTML */
+        }
+
+        .shipping-address .full-width {
+            width: calc(100% - 22px);
+            display: inline-block;
+            margin-bottom: 20px; /* Menambahkan margin bottom untuk memisahkan baris */
+        }
+
+        .shipping-address .third-width {
+            width: calc(33.33% - 10px); /* Mengurangi margin-right agar sesuai dengan perubahan pada HTML */
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .shipping-address .third-width:last-child {
+            margin-right: 0; /* Menghapus margin-right untuk elemen terakhir dalam setiap baris */
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-to-bag, .continue {
+            display: flex;
+            align-items: center;
+            color: #3B1347;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .continue {
+            background-color: #D4C29A;
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #EFE9E1;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="top-bar">
+            <img src="resource/left-icon.png" alt="Left Icon" class="icon left-icon"> 
+            <img src="resource/logo.png" alt="Logo" class="logo"> 
+            <div class="right-icons">
+                <img src="resource/right-icon1.png" alt="Right Icon 1" class="icon right-icon1"> 
+                <img src="resource/right-icon2.png" alt="Right Icon 2" class="icon right-icon2"> 
+                <img src="resource/right-icon3.png" alt="Right Icon 3" class="icon right-icon3">
+            </div>
+        </div>
+        <div class="links">
+            <a href="main_page.html">Home</a><span>|</span>
+            <a href="main_page.html#section4">Best Seller</a><span>|</span>
+            <a href="EDT_page.html">Eau De Toilette</a><span>|</span>
+            <a href="EDP_page.html">Eau De Parfum</a>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="left">
+                <div class="send-gift">
+                    <input type="checkbox" id="sendAsGift">
+                    <label for="sendAsGift">Send As Gift</label>
+                    <p>Free Gift Card And Message</p>
+                    <p>Click To Send A Gift Of Love</p>
+                </div>
+                <div class="payment-detail">
+                    <h2>Payment Detail</h2>
+                    <div class="product">
+                        <img src="resource/product1.png" alt="Product 1">
+                        <span>Eucalyptia Royale<br>75ml Eau De Parfum</span>
+                        <span>$125.00</span>
+                    </div>
+                    <div class="product">
+                        <img src="resource/product2.png" alt="Product 2">
+                        <span>Eucalyptia Royale<br>75ml Eau De Toilette</span>
+                        <span>$125.00</span>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <span>Total</span>
+                        <span>$250.00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="shipping-address">
+                    <h2>Shipping Address</h2>
+                    <div class="half-width">
+                        <label for="first-name">First Name*</label>
+                        <input type="text" id="first-name" placeholder="First Name*">
+                    </div>
+                    <div class="half-width">
+                        <label for="last-name">Last Name*</label>
+                        <input type="text" id="last-name" placeholder="Last Name*">
+                    </div>
+                    <div class="full-width">
+                        <label for="address">Address*</label>
+                        <input type="text" id="address" placeholder="Address*">
+                    </div>
+                    <div class="full-width">
+                        <label for="notes">Notes (optional)</label>
+                        <textarea id="notes" placeholder="Notes (optional)"></textarea>
+                    </div>
+                    <div class="third-width">
+                        <label for="city">City*</label>
+                        <input type="text" id="city" placeholder="City*">
+                    </div>
+                    <div class="third-width">
+                        <label for="state">State*</label>
+                        <input type="text" id="state" placeholder="State*">
+                    </div>
+                    <div class="third-width">
+                        <label for="code">Code*</label>
+                        <input type="text" id="code" placeholder="Code*">
+                    </div>
+                    <div class="full-width">
+                        <label for="phone">Phone*</label>
+                        <input type="tel" id="phone" placeholder="Phone*">
+                    </div>
+                    <div class="full-width">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" placeholder="Email*">
+                    </div>
+                </div>
+                <div class="buttons">
+                    <a href="main_page.html" class="back-to-bag">← Back To Bag</a>
+                    <a href="next_page.html" class="continue">Continue →</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
