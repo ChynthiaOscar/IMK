@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Received</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Cinzel', serif;
+            background-color: #f5f5f0;
+            text-align: center;
+            color: #3a1442;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3B1347;
+            padding: 10px;
+            position: relative;
+            font-family: 'Cinzel', serif;
+        }
+
+        .navbar img {
+            width: 75px;
+            cursor: pointer;
+        }
+
+        .back-button {
+            cursor: pointer;
+            font-size: 24px;
+            color: #EFE9E1;
+            position: absolute;
+            left: 10px;
+            font-family: 'Cinzel', serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Cinzel', serif;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #3a1442;
+            padding: 10px;
+            color: #f5f5f0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-family: 'Cinzel', serif;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .checkmark {
+            width: 300px;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        .button {
+            background-color: #d5c080;
+            color: #3a1442;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-family: 'Cinzel', serif;
+        }
+
+        .button:hover {
+            background-color: #b5a070;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="back-button">&#x2190;</div>
+        <img src="resource/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <h1>Payment Received</h1>
+        <img src="resource/successLogo.png" alt="Checkmark" class="checkmark">
+        <p>Your Order Has Been Confirmed</p>
+        <button class="button">Back to Homepage</button>
+    </div>
+</body>
+</html>

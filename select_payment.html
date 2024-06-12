@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Payment Method</title>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Crimson Text', serif;
+            background-color: #EFE9E1;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3B1347;
+            padding: 10px;
+            position: relative;
+        }
+        .navbar img {
+            width: 75px;
+            cursor: pointer;
+        }
+        .back-button {
+            cursor: pointer;
+            font-size: 24px;
+            color: #EFE9E1;
+            position: absolute;
+            left: 10px;
+        }
+        .container {
+            padding: 20px;
+        }
+        .title {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #3B1347;
+        }
+        .button, .payment-button {
+            font-family: 'Cinzel', serif;
+        }
+        .button {
+            display: block;
+            background-color: #D7C097;
+            color: #3B1347;
+            padding: 10px;
+            margin: 10px auto;
+            width: 200px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .payment-section {
+            margin: 20px 0;
+        }
+        .payment-section.flex-center {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .payment-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .payment-button {
+            background-color: #D7C097;
+            color: #3B1347;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .payment-button img {
+            width: 20px;
+        }
+        .payment-button .text {
+            flex-grow: 1;
+            text-align: left;
+            margin-left: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .arrow {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="back-button">&#x2190;</div>
+        <img src="resource/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <div class="title">SELECT PAYMENT METHOD</div>
+        
+        <div class="payment-section flex-center">
+            <button class="button">CREDIT / DEBIT</button>
+            <button class="payment-button">
+                <img src="resource/creditcard.png" alt="Card Icon">
+                <span class="text">CREDIT / DEBIT CARD</span>
+                <img src="resource/forwardArrow.png" alt="Arrow" class="arrow">
+            </button>
+        </div>
+        
+        <div class="payment-section">
+            <button class="button">VIRTUAL ACCOUNT</button>
+            <div class="payment-buttons">
+                <button class="payment-button">
+                    <img src="resource/mandiri.png" alt="Mandiri">
+                    <span class="text">MANDIRI</span>
+                    <img src="resource/forwardArrow.png" alt="Arrow" class="arrow">
+                </button>
+                <button class="payment-button">
+                    <img src="resource/bca.png" alt="BCA">
+                    <span class="text">BCA</span>
+                    <img src="resource/forwardArrow.png" alt="Arrow" class="arrow">
+                </button>
+                <button class="payment-button">
+                    <img src="resource/bni.png" alt="BNI">
+                    <span class="text">BNI</span>
+                    <img src="resource/forwardArrow.png" alt="Arrow" class="arrow">
+                </button>
+            </div>
+        </div>
+        
+        <div class="payment-section">
+            <button class="button">E-WALLET</button>
+            <div class="payment-buttons">
+                <button class="payment-button">
+                    <img src="resource/gopay.png" alt="Gopay">
+                    <span class="text">Gopay</span>
+                    <img src="resource/forwardArrow.png" alt="Arrow" class="arrow">
+                </button>
+                <button class="payment-button">
+                    <img src="resource/ovo.png" alt="Ovo">
+                    <span class="text">Ovo</span>
+                    <img src="resource/forwardArrow.png" alt="Arrow" class="arrow">
+                </button>
+                <button class="payment-button">
+                    <img src="resource/dana.png" alt="Dana">
+                    <span class="text">Dana</span>
+                    <img src="resource/forwardArrow.png" alt="Arrow" class="arrow">
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
