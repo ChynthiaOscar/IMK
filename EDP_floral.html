@@ -109,6 +109,10 @@
                 height: 8px;
                 line-height: 8px;
             }
+
+            .floral {
+                background-color: #C5B773;
+            }
             .btn:hover {
                 background-color: #C5B773;
                 color: #3B1347;
@@ -227,7 +231,6 @@
             .footer a:hover {
                 text-decoration: underline;
             }
-
             .popup-overlay {
                 display: none;
                 position: fixed;
@@ -280,10 +283,10 @@
     </div>
 
     <div class="title">
-        <p>Eau De Toilette</p>
+        <p>Eau De Parfume</p>
     </div>
     <div class="btn-container">
-        <a href="EDT_floral.html" class="btn">Floral</a>
+        <a href="EDP_floral.html" class="btn floral">Floral</a>
         <a href="#" class="btn">Fresh</a>
         <a href="#" class="btn">Spicy</a>
         <a href="#" class="btn">Woody</a>
@@ -293,8 +296,8 @@
     <section id="section">
         <div class="product-container">
             <div class="product">
-                <a href="Product_detail1.html"><img src="resource/floral2_EDT.png" alt="Produk 1" class="produk1"></a> <br>
-                <a href="Product_detail1.html">Eucalyptia Royale</a>
+                <a href="Product_detail2.html"><img src="resource/floral1_EDP.png" alt="Produk 1" class="produk1"></a> <br>
+                <a href="Product_detail2.html">Eucalyptia Royale</a>
                 <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
                 <div class="price">
                     <p>Eau De Toilette | 75ML</p>
@@ -303,7 +306,7 @@
                 <a href="#" class="square-button">Add To Bag</a>
             </div>
             <div class="product">
-                <a href="#produk2"><img src="resource/floral1_EDT.png" alt="Produk 2" class="produk2"></a> <br>
+                <a href="#produk2"><img src="resource/floral2_EDP.png" alt="Produk 2" class="produk2"></a> <br>
                 <a href="#produk2">Eucalyptia Royale</a>
                 <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
                 <div class="price">
@@ -312,53 +315,11 @@
                 </div>
                 <a href="#" class="square-button">Add To Bag</a>
             </div>
-            <div class="product">
-                <a href="#produk3"><img src="resource/spicy1_EDT.png" alt="Produk 3" class="produk3"></a> <br>
-                <a href="#produk3">Eucalyptia Royale</a>
-                <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
-                <div class="price">
-                    <p>Eau De Toilette | 75ML</p>
-                    <h4>$ 125.00</h4>
-                </div>
-                <a href="#" class="square-button">Add To Bag</a>
-            </div>
+            <div class="product"></div>
         </div>
     </section>
 
-    <section id="section">
-        <div class="product-container">
-            <div class="product">
-                <a href="#produk1"><img src="resource/spicy2_EDT.png" alt="Produk 1" class="produk1"></a> <br>
-                <a href="#produk1">Eucalyptia Royale</a>
-                <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
-                <div class="price">
-                    <p>Eau De Toilette | 75ML</p>
-                    <h4>$ 125.00</h4>
-                </div>
-                <a href="#" class="square-button">Add To Bag</a>
-            </div>
-            <div class="product">
-                <a href="#produk2"><img src="resource/woody_EDT.png" alt="Produk 2" class="produk2"></a> <br>
-                <a href="#produk2">Eucalyptia Royale</a>
-                <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
-                <div class="price">
-                    <p>Eau De Toilette | 75ML</p>
-                    <h4>$ 125.00</h4>
-                </div>
-                <a href="#" class="square-button">Add To Bag</a>
-            </div>
-            <div class="product">
-                <a href="#produk3"><img src="resource/fresh_EDT.png" alt="Produk 3" class="produk3"></a> <br>
-                <a href="#produk3">Eucalyptia Royale</a>
-                <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
-                <div class="price">
-                    <p>Eau De Toilette | 75ML</p>
-                    <h4>$ 125.00</h4>
-                </div>
-                <a href="#" class="square-button">Add To Bag</a>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Popup Overlay -->
     <div class="popup-overlay" id="popupOverlay"></div>
@@ -397,9 +358,7 @@
                 if (section) {
                     section.scrollIntoView({ behavior: 'smooth' });
                 }
-            }
-
-            var addToBagButtons = document.querySelectorAll('.square-button');
+            }var addToBagButtons = document.querySelectorAll('.square-button');
             addToBagButtons.forEach(function(button) {
                 button.addEventListener('click', function(event) {
                     event.preventDefault();
