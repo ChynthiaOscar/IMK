@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+    <style>
+        body {
+    margin: 0;
+    font-family: 'Cinzel', serif;
+    background-color: #EFE9E1;
+}
+
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3B1347;
+    font-family: 'Crimson Text', serif;
+}
+
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 100px;
+    width: 75px;
+}
+
+.icon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.left-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.right-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.right-icon1, .right-icon2, .right-icon3 {
+    width: 40px;
+    height: 40px;
+}
+
+.right-icon2 {
+    width: 28px;
+    height: 33px;
+    margin-bottom: 5px;
+}
+
+.right-icon3 {
+    width: 37px;
+    height: 35px;
+    margin-bottom: 4px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    background-color: #EFE9E1;
+    font-weight: 650;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.links a {
+    color: #3B1347;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.links span {
+    color: #3B1347;
+    margin: 0 5px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 20px 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bag {
+    width: 60%;
+    padding-right: 40px;
+}
+
+.bag h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #3B1347;
+    margin-bottom: 30px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    gap: 20px;
+}
+
+.product img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-title {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: #3B1347;
+    margin: 0;
+}
+
+.product-type {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: #7A6F6C;
+    margin: 5px 0;
+}
+
+.product-price {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: #3B1347;
+    margin: 0;
+    min-width: 100px;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    background-color: #D3CDBD;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.quantity-control button {
+    background-color: #EFE9E1;
+    border: none;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #3B1347;
+}
+
+.quantity-control button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.quantity-control span {
+    padding: 0 10px;
+    font-size: 18px;
+    color: #3B1347;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #3B1347;
+    margin-right: 15px;
+}
+
+.summary {
+    width: 35%;
+    padding: 30px;
+    background-color: #E5DCB8;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: #3B1347;
+    margin-bottom: 20px;
+}
+
+.summary .subtotal,
+.summary .tax,
+.summary .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-family: 'Cinzel', serif;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3B1347;
+    color: #EFE9E1;
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #503267;
+}
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="top-bar">
+            <img src="resource/left-icon.png" alt="Left Icon" class="icon left-icon"> 
+            <img src="resource/logo.png" alt="Logo" class="logo"> 
+            <div class="right-icons">
+                <img src="resource/right-icon1.png" alt="Right Icon 1" class="icon right-icon1"> 
+                <img src="resource/right-icon2.png" alt="Right Icon 2" class="icon right-icon2"> 
+                <img src="resource/right-icon3.png" alt="Right Icon 3" class="icon right-icon3">
+            </div>
+        </div>
+        <div class="links">
+            <a href="main_page.html">Home</a><span>|</span>
+            <a href="main_page.html#section4">Best Seller</a><span>|</span>
+            <a href="EDT_page.html">Eau De Toilette</a><span>|</span>
+            <a href="EDP_page.html">Eau De Parfum</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="bag">
+            <h2>Bag</h2>
+            <div class="product">
+                <button class="remove-button">🗑️</button>
+                <img src="resource/floral1_EDP.png" alt="Eucalyptia Royale Eau De Parfum">
+                <div class="product-details">
+                    <p class="product-title">Eucalyptia Royale</p>
+                    <p class="product-type">Eau De Parfum</p>
+                    <p class="product-type">75mL</p>
+                </div>
+                <div class="product-price">$125.00</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn increase">+</button>
+                </div>
+            </div>
+            <div class="product">
+                <button class="remove-button">🗑️</button>
+                <img src="resource/floral1_EDT.png" alt="Eucalyptia Royale Eau De Toilette">
+                <div class="product-details">
+                    <p class="product-title">Eucalyptia Royale</p>
+                    <p class="product-type">Eau De Toilette</p>
+                    <p class="product-type">75mL</p>
+                </div>
+                <div class="product-price">$125.00</div>
+                <div class="quantity-control">
+                    <button class="quantity-btn decrease">-</button>
+                    <span class="quantity">1</span>
+                    <button class="quantity-btn increase">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary">
+            <h2>Summary</h2>
+            <div class="subtotal">
+                <span>Subtotal</span>
+                <span>$250.00</span>
+            </div>
+            <div class="tax">
+                <span>Tax</span>
+                <span>$22.50</span>
+            </div>
+            <div class="total">
+                <span>Total</span>
+                <span>$272.50</span>
+            </div>
+            <button class="checkout-button">Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.product').forEach(function(product) {
+                const quantityDisplay = product.querySelector('.quantity');
+                const decreaseButton = product.querySelector('.decrease');
+                const increaseButton = product.querySelector('.increase');
+                let quantity = parseInt(quantityDisplay.textContent);
+
+                decreaseButton.addEventListener('click', function() {
+                    if (quantity > 1) {
+                        quantity--;
+                        quantityDisplay.textContent = quantity;
+                    }
+                });
+
+                increaseButton.addEventListener('click', function() {
+                    quantity++;
+                    quantityDisplay.textContent = quantity;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
