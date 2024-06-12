@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Payment Method</title>
+    <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Crimson Text', serif;
+            background-color: #EFE9E1;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #3B1347;
+            padding: 10px;
+            position: relative;
+        }
+        .navbar img {
+            width: 75px;
+            cursor: pointer;
+        }
+        .back-button {
+            cursor: pointer;
+            font-size: 24px;
+            color: #EFE9E1;
+            position: absolute;
+            left: 10px;
+        }
+        .container {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+            background: #FFF;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .total-payment {
+            font-size: 24px;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 20px;
+        }
+        .payment-details {
+            font-size: 20px;
+            font-family: 'Cinzel', serif;
+            margin-bottom: 20px;
+        }
+        .virtual-account {
+            font-size: 36px;
+            font-family: 'Cinzel', serif;
+            margin: 20px 0;
+        }
+        .expiry {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-family: 'Cinzel', serif;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .how-to-pay {
+            background-color: #E6E1DC;
+            color: #3B1347;
+        }
+        .payment-completed {
+            background-color: #C8A97E;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="back-button">&#x2190;</div>
+        <img src="resource/logo.png" alt="Logo" class="logo">
+    </div>
+    <div class="container">
+        <div class="total-payment">Total Payment</div>
+        <div class="payment-details">$ 260.00</div>
+        <div class="payment-details">BCA Virtual Account</div>
+        <div class="virtual-account">8505 9951 3690</div>
+        <div class="expiry">
+            This number will expire in<br>
+            <strong>24 : 00 : 00</strong><br>
+            31 May 2024, 11.48 WIB
+        </div>
+        <div class="buttons">
+            <button class="button how-to-pay">How To Pay</button>
+            <button class="button payment-completed">Payment Completed</button>
+        </div>
+    </div>
+</body>
+</html>
