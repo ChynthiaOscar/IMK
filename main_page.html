@@ -1,0 +1,302 @@
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+        <style>
+            body {
+                margin: 0;
+                font-family: 'Cinzel';
+                font-family: 'Crimson Text';
+            }
+            .navbar {
+                display: flex;
+                position: fixed;
+                top: 0;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                background-color: #3B1347;
+                font-family: 'Crimson Text', serif;
+            }
+            .top-bar {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo {
+                margin-left: 100px;
+                width: 75px;
+            }
+            .icon {
+                margin: 0 10px;
+                cursor: pointer;
+            }
+            .left-icon {
+                width: 40px;
+                height: 40px;
+                margin-left: 20px;
+            }
+            .right-icons {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+            }
+
+            .right-icon1 {
+                width: 40px;  
+                height: 40px; 
+            }
+            .right-icon2 {
+                width: 28px;  
+                height: 33px; 
+                margin-bottom: 5px;
+            }
+            .right-icon3 {
+                width: 37px;  
+                height: 35px;
+                margin-bottom:4px; 
+            }
+
+            .links {
+                display: flex;
+                justify-content: center;
+                background-color: #EFE9E1;
+                font-weight: 650;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .links a {
+                color: #3B1347;
+                text-decoration: none;
+                margin: 0 15px;
+            }
+            .links span {
+                color: #3B1347;
+                margin: 0 5px;
+            }
+            .links a:hover {
+                text-decoration: underline;
+            }
+
+            /*section 4*/
+            #section4 {
+                padding: 50px 0; /* Padding atas dan bawah */
+                background-color: #EFE9E1; /* Warna latar belakang */
+            }
+
+            .section4-header{
+                display: flex;
+                justify-content: center;
+                font-family: 'Cinzel';
+                font-size: 30px;
+                color: #3B1347;
+            }
+
+            
+            .product-container {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+            
+            .product {
+                text-align: center;
+                width: 25%; 
+                margin-bottom: 30px;
+            }
+            
+            .product img {
+                width: 200px;
+                height: 300px;
+                object-fit: cover; 
+                border-radius: 8px; 
+            }
+            
+            .product h3 {
+                margin-top: 10px; 
+                margin-bottom: 5px; 
+                font-size: 30px;
+                color: #3B1347;
+            }
+            
+            .product p {
+                margin-bottom: 0; /* Hapus margin bawah deskripsi produk */
+            }
+
+            .price{
+                color: #3B1347;
+            }
+
+            .price p{
+                margin-top: 50px;
+                font-size: 20px;
+            }
+
+            .price h4{
+                font-size: 25px;
+            }
+
+            .square-button {
+                position: relative;
+                display: inline-block;
+                padding: 10px 20px; /* Atur padding sesuai kebutuhan */
+                text-decoration: none;
+                background-color: #3B1347;
+                color: #BFACC8;
+                transition: all 0.3s ease;
+                width: 140px;
+                margin-bottom: 100px;
+              }
+              
+              .square-button::before {
+                content: '';
+                position: absolute;
+                top: 5px;
+                left: 5px;
+                right: 5px;
+                bottom: 5px;
+                border: 2px solid #BFACC8; /* Atur ketebalan dan warna garis */
+              }
+              
+              .square-button:hover {
+                background-color: #BFACC8;
+                color: #3B1347;
+              }
+              
+              .square-button:hover::before {
+                border-color: #3B1347; /* Warna garis border di dalam saat hover */
+              }
+
+              .footer {
+                background-color: #2A2525;
+                color: #EFE9E1;
+                padding: 20px;
+                text-align: center;
+            }
+            
+            .footer a {
+                color: #EFE9E1;
+                text-decoration: none;
+                margin: 0 40px;
+                font-size: 10px;
+            }
+
+            .text {
+                margin-top: 30px;
+                margin-right: 40px;
+            }
+
+            .contact {
+                margin-top: 50px ;
+            }
+
+            .contact p {
+                font-size: 15px;
+            }
+            
+            .footer a:hover {
+                text-decoration: underline;
+            }
+
+        </style>
+    </head>
+    <body>
+            
+    <div class="navbar">
+        <div class="top-bar">
+            <img src="left-icon.png" alt="Left Icon" class="icon left-icon"> 
+            <img src="logo.png" alt="Logo" class="logo"> 
+            <div class="right-icons">
+                <img src="right-icon1.png" alt="Right Icon 1" class="icon right-icon1"> 
+                <img src="right-icon2.png" alt="Right Icon 2" class="icon right-icon2"> 
+                <img src="right-icon3.png" alt="Right Icon 3" class="icon right-icon3">
+            </div>
+        </div>
+        <div class="links">
+            <a href="#link1">Home</a><span>|</span>
+            <a href="#link2">Best Seller</a></a><span>|</span>
+            <a href="#link3">Eau De Toilette</a></a><span>|</span>
+            <a href="#link4">Eau De Parfume</a>
+        </div>
+    </div>
+
+    <section id="section1">
+        <img src="main_page1.png" alt="Gambar Section 1" style="width: 100%; margin-top:70px">
+    </section>
+
+    <!-- Section 2 -->
+    <section id="section2">
+        <img src="main_page2.png" alt="Gambar Section 2" style="width: 100%;">
+    </section>
+
+    <!-- Section 3 -->
+    <section id="section3">
+        <img src="main_page3.png" alt="Gambar Section 3" style="width: 100%;">
+    </section>
+
+
+    <!-- Section 4 -->
+    <section id="section4">
+        <div class="section4-header">
+            <h2>Best Seller</h2>
+        </div>
+        <div class="product-container">
+            <div class="product">
+                <a href="#produk1"><img src="floral1_EDT.png" alt="Produk 1" class="produk1"></a>
+                <h3><a href="#produk1">Eucalyptia Royale</a></h3>
+                <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
+                <div class="price">
+                    <p>Eau De Toilette | 75ML</p>
+                    <h4>$ 125.00</h4>
+                </div>
+                <a href="#" class="square-button">Add To Bag</a>
+            </div>
+            <div class="product">
+                <a href="#produk2"><img src="floral1_EDP.png" alt="Produk 2" class="produk2"></a>
+                <h3><a href="#produk2">Eucalyptia Royale</a></h3>
+                <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
+                <div class="price">
+                    <p>Eau De Toilette | 75ML</p>
+                    <h4>$ 125.00</h4>
+                </div>
+                <a href="#" class="square-button">Add To Bag</a>
+            </div>
+            <div class="product">
+                <a href="#produk3"><img src="floral2_EDP.png" alt="Produk 3" class="produk3"></a>
+                <h3><a href="#produk3">Eucalyptia Royale</a></h3>
+                <p>A majestic blend of sun-kissed eucalyptus and citrus, exuding natural elegance and sophistication.</p>
+                <div class="price">
+                    <p>Eau De Toilette | 75ML</p>
+                    <h4>$ 125.00</h4>
+                </div>
+                <a href="#" class="square-button">Add To Bag</a>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <img src="logo.png" alt="Footer Logo" style="width: 100px;">
+        </div>
+        <div class="text">
+            <a href="#link1">TERM AND CONDITIONS</a> 
+            <a href="#link2">PRIVACY POLICY</a> 
+            <a href="#link3">DISCLAIMER</a>
+        </div>
+        <div class="contact">
+            <p>CONTACT US NOW</p>
+        </div>
+        <div class="sosmed">
+            <img src="social-media-icon1.png" alt="Social Media Icon 1" style="width: 50px; margin: 0 10px; margin-bottom: 10px;">
+            <img src="social-media-icon2.png" alt="Social Media Icon 2" style="width: 65px; margin: 0 10px;">
+            <img src="social-media-icon3.png" alt="Social Media Icon 3" style="width: 50px; margin: 0 10px;">
+        </div>
+    </footer>
+    </body>
+    <script>
+
+    </script>
+</html>
